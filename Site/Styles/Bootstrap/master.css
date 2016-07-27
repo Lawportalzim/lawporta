@@ -1,0 +1,84 @@
+﻿div.top-bar
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right;
+    width: 100%;
+}
+div.top-bar div.searchContainer
+{
+    float: left;   
+    width: 300px;
+}
+div.top-bar div.addLink
+{
+    float: right;
+    width: 300px;
+}
+div.top-bar div.addLink a
+{
+    float: right;
+}
+div.form-actions div.back
+{
+    float: left;
+    margin-right: 20px;
+    width: 100px;
+}
+div.form-actions div.savebtn
+{
+    float: left;    
+    width: 500px;
+}
+ul.breadcrumb li
+{
+    width: 100%;
+}
+h2.mainTitle
+{
+    float: left;
+    width: 700px;
+}
+span.total
+{
+    float: right; 
+    display: inline-block;
+    line-height: 35px;
+}
+span.total span
+{
+    color: Red;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.row-fluid 
+{
+    margin-bottom: 20px;
+}
+.dataTables_filter
+{
+    width: 270px;
+    float: right;
+}
+span.online,
+span.offline
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+span.online{background: green;}
+span.offline{background: grey;}
+table.datatable tr:hover td
+{
+    background: #317EAC;
+    color: #fff;
+}
+table.datatable thead tr:hover td
+{
+    color: #555;
+    background: #fff;
+}

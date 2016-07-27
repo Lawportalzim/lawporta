@@ -1,0 +1,752 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+p.feedback{color: Green;}
+body   
+{
+    background: #fff;
+    font-size: .80em;
+    font-family: "Ubuntu",Helvetica,Arial,sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #767575;
+    height: 100%;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+p.update
+{
+   position: absolute;
+   bottom: 115px;
+  left: 0;
+}
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;    
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+h1, h2
+{
+    font-variant: small-caps;
+}
+.main h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    background: #b0cfe0;
+    padding: 5px 5px 5px 20px;
+    color: #fff;
+    margin-top: 40px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.1em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+a.back
+{
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: .8em;
+    color: #FF6000;
+    margin-top: 20px; 
+    padding: 0 5px 0 0;   
+}
+a.mainmenu
+{
+    padding-left: 5px;
+    border-left: #FF6000 solid 1px;
+}
+a.back:hover
+{
+    color: #000;
+}
+.paging
+{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.paging a.previous,
+.paging a.next
+{
+    background: none;
+    font-size: .8em;
+}
+.paging a
+{
+    float: left;
+    margin-right: 5px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.paging a.selected
+{
+    background: #643013;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    color: #fff;
+}
+.page
+{
+    width: 100%;
+    background-color: #fff;
+    min-height: 100%;
+    position: relative;
+}
+div.center
+{
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+    height: 185px;
+    border-bottom: #643013 solid 3px;
+}
+.header .search
+{
+    width: 950px;
+    position: absolute;
+    right: 5px;
+    height: 35px;
+    bottom: 5px;
+    clear: both;
+    border-radius: 5px;
+    padding: 14px 0;
+    background: #3089b7;
+}
+.header .search label
+{
+    color: #fff;
+    display: inline-block;
+    padding-left: 120px;
+    font-size: 1.3em;
+    width: auto;
+}
+.header .search input.input
+{
+    width: 410px;
+    height: 22px;
+    padding: 5px;
+}
+.header .search input.button
+{
+    height: 35px;
+    width: 85px;
+    padding: 5px;
+}
+.header h1
+{
+    background: url(/img/logo.png) no-repeat left top;
+    overflow: hidden;    
+    padding-top: 97px;  
+    height: 0;
+    margin-bottom: 35px;
+    color: #c28a3b;
+    font-size: 2.3em;
+    font-family: Georgia;
+    letter-spacing: .5em;
+    width: 390px;
+}
+
+.main
+{
+    padding: 0px 12px 60px;
+    margin: 50px 8px 8px 8px;
+    min-height: 420px;
+    overflow: hidden;
+}
+.left
+{
+    float: left;
+    overflow: hidden;
+    width: 650px;
+}
+.right
+{
+    float: right;
+    overflow: hidden;
+    width: 300px;
+}
+.list-tout h4
+{
+    padding-bottom: 5px;
+    background: #69767c;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 40px;    
+}
+.right .list-tout > ul, .right .list-tout > ul ul
+{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+}
+.right .list-tout > ul > li
+{
+    padding: 5px 0;
+    border-bottom: #999 1px solid;
+}
+.right .list-tout > ul > li a
+{
+    text-decoration: none;
+    background: url(/img/arrows.gif) no-repeat left center;
+    padding-left: 15px;
+    color: #643013;
+    display: inline-block;
+}
+.right .list-tout > ul > li a.selected
+{
+    color: #000;
+    font-weight: bold;
+}
+.right .list-tout > ul > li a:hover
+{
+    color: #000;
+}
+.right .list-tout > ul ul
+{
+    padding-left: 17px;
+    font-size: .9em;
+    display: none;
+}
+.right .list-tout > ul ul li a
+{
+    color: #034AF3
+}
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    border-top: #643013 solid 3px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+}
+
+div.menu
+{
+    background: #f9f9f9;
+    border: 2px #e0e0e1 solid;
+    overflow: hidden;
+    height: 95px;
+    clear: left;
+    margin-top: 36px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: 40px;
+    float: right;
+}
+div.menu ul li
+{
+    float: left;
+    width: auto;
+    text-align: left;
+    margin-left: 10px;    
+    
+}
+div.menu ul li a
+{
+    
+}
+div.menu ul li:first-child
+{
+    border: none;
+}
+div.menu ul li a, div.menu ul li a:visited
+{   
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 11px;  
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff;
+    background: #3089B7;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+div.menu ul li a.selected,
+div.menu ul li a:hover
+{    
+    background: #643013;
+}
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+.control-group
+{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.control-group span{margin-left: 110px;}
+label
+{
+    display: block;
+    float: left;
+    height: 37px;
+    line-height: 38px;
+    margin-right: 10px;
+    text-align: right;
+    width: 167px;   
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 450px;
+    border: 1px solid #ccc;
+    height: 15px;
+    padding: 10px;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+a.button
+{
+    width: 90px;
+    height: 20px;
+    border: none;
+    background: #3089B7;
+    display: inline-block;
+    padding: 5px;
+    font-size: 1.2em;
+    color: #fff !important;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 550px;
+}
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+/*article list*/
+#articles
+{
+    position: relative;
+    overflow: hidden;
+}
+#articles > div
+{
+    float: left;
+    width: 265px;
+    height: 35px;
+    background: url(/img/bullet.gif) no-repeat left 7px;
+    padding-left: 20px;
+    margin: 5px 5px 5px 0;
+}
+#articles h3
+{
+    margin: 0;
+}
+#list h3
+{
+    color: #1571a2;
+    margin: 0;
+    text-transform: none;
+}
+#list h3 a span, p.notes a span, a span.ap
+{
+    display: inline-block;
+    background: #643013;
+    padding: 1px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: .8em;
+}
+span.ap, a span.ap
+{
+    background: #034AF3 !important;
+    color: #fff;
+}
+p.notes a span
+{
+    margin-right: 10px;
+}
+#articles h3 a
+{
+    text-decoration: none;
+    font-size: .9em;
+}
+#list h3 a.parties
+{
+    background: url(/img/parties.png) no-repeat top left;
+    display: inline-block;
+    padding: 5px 0 10px 35px;
+}
+small.by
+{
+    background: url(/img/ruler.png) no-repeat top left;
+    display: inline-block;
+    padding: 5px 0 10px 30px;
+}
+#articles p
+{
+    font-size: .95em;
+}
+#list > div
+{
+    padding: 10px;
+    border: #643013 1px solid;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+div.details
+{
+    border: #643013 1px solid;
+    padding: 0 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+div.details > div
+{
+    padding: 5px 10px;
+}
+ul.tabs
+{
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+ul.tabs li
+{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #643013;
+    color: #fff;
+}
+ul.tabs li.selected
+{
+    background: none;
+    color: #643013;    
+}
+div.details div.fullcase
+{
+    display: none;
+}
+div.details div.fullcase p,
+div.details div.fullcase span,
+div.details div.byCategory p,
+div.details div.byCategory div,
+div.details div.byCategory span,
+div.details div.fullcase div,
+div.details div.byCategory font
+{
+    font-size: 12pt !important;
+}
+body.search .left
+{
+    width: 100%;
+}
+body.search .right
+{
+    display: none;
+}
+a.register{ border: none;}
+/*login page*/
+body.login div.loginDisplay,body.login .menu{display: none;}
+body.login .header{overflow: hidden;}
+body.login .title{ margin: 0 auto; float: none; width: 390px;}
+body.login p.update{width: 100%; text-align: center;}
+body.login .left
+{
+     width: 375px;
+     float: none;
+     margin: 0 auto;
+}
+body.login h1
+{
+    text-align: center;
+}
+body.login .right{ display: none;}
+body.login .alert
+{
+    margin-top: 10px;
+    text-align: center;
+}
+body.login label
+{
+    display: block;
+    width: 80px;
+    text-align: right;
+    float: left;
+    margin-right: 5px;
+    line-height: 32px;
+}
+body.login fieldset p
+{
+    text-align: center;
+    font-weight: bold;
+}
+body.login input.input-large
+{
+    width: 190px;
+    min-height: 28px;
+    border-radius: 3;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+body.login .btn
+{
+    width: 190px;
+    height: 28px;
+    color: #fff;
+    background-color: #43A1DA;
+    background-repeat: repeat-x;
+    border-color: #369BD7 #369BD7 #2071A1;
+    border-radius: 3px;    
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-left-color: inherit;
+    border-left-width: 0;
+    border-radius: 4px;
+    border-right-color: inherit;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: inherit;
+    border-top-style: none;
+    border-top-width: 0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+    margin-left: 0.3em;
+    padding: 4px 10px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    margin-left: 65px;
+}
+body.login .input-prepend
+{
+    width: 300px;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+a.moreText
+{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    color: #4B6C9E;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: .85em;
+}
+a.moreText:hover{color:#643013;}
+.back-to-top{
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+    line-height: 25px;
+    padding: 0 5px;
+    color: #fff;
+    background: #3089b7;
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+.back-to-top:hover {
+    background: #643013;
+}
+.back-to-top.show {
+    opacity: 1;
+}

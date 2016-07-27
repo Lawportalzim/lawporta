@@ -252,3 +252,4 @@ KayArticleCommentDAL.cs
 KayArticleDAL.cs
 KayAuditDAL.cs
 *.pdb
+obj
