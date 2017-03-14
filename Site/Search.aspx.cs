@@ -32,6 +32,7 @@ namespace Site
                 Master.MasterPageTitle = "Search Results";
                 String query = Request.QueryString["q"];
                 SearchString = query;
+                query = query.Replace("'", "''");
 
                 if (!String.IsNullOrEmpty(query))
                 {
@@ -70,7 +71,7 @@ namespace Site
                     }
                     if (CasesData.Count == 0 && DescriptionsData.Count == 0 && CategoriesData.Count == 0)
                     {
-                        SearchSummary.Text = String.Format("Your search for <strong>{0}</strong> did not return any results.", Utilities.HtmlSafe(query));
+                        SearchSummary.Text = String.Format("Your search for <strong>{0}</strong> did not return any results.", Utilities.HtmlSafe(SearchString));
                     }
                     else
                     {
