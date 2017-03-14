@@ -24,6 +24,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,9 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\KayHelp.cs" />
-    <Compile Include="BLL\KayArticle.cs" />
-    <Compile Include="BLL\KayArticleComment.cs" />
-    <Compile Include="BLL\KayAudit.cs" />
     <Compile Include="BLL\KayCompany.cs" />
     <Compile Include="BLL\KayCaseCategoryDescription.cs" />
     <Compile Include="BLL\KayCase.cs" />
@@ -95,13 +93,10 @@
     <Compile Include="Controls\LinkButton.cs" />
     <Compile Include="Controls\Pager.cs" />
     <Compile Include="Controls\Textarea.cs" />
-    <Compile Include="DAL\KayArticleCommentDAL.cs" />
     <Compile Include="DAL\KayHelpDAL.cs" />
-    <Compile Include="DAL\KayArticleDAL.cs" />
     <Compile Include="DAL\KayCompanyDAL.cs" />
     <Compile Include="DAL\KayCaseCategoryDescriptionDAL.cs" />
     <Compile Include="DAL\KayCaseDAL.cs" />
-    <Compile Include="DAL\KayAuditDAL.cs" />
     <Compile Include="DAL\KayCategoryDAL.cs" />
     <Compile Include="DAL\KayContactListDAL.cs" />
     <Compile Include="DAL\KayEventHistoryDAL.cs" />

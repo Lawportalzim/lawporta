@@ -1,0 +1,35 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dialogue.Master.cs" Inherits="Kay.Site.Admin.Common.MasterPages.Dialogue" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-au" >
+
+    <head id="Head" runat="server">
+        
+        <title />
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Language" content="en-AU" />
+        <meta name="generator" content="Kay CMS (C2 Media Pty Ltd)" />
+                
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/compress.axd?s=cms/css" media="screen" />     
+        <script type="text/javascript" src="/compress.axd?s=cms/js"></script>
+        <script type="text/javascript">
+            $(document).ready(Kay.dialogue.init);
+        </script>
+        
+    </head>
+    
+    <body id="Body" runat="server" class="dialogue">
+    <!--start-->
+    <Kay:Form Id="KayForm" runat="server">
+    
+        <asp:Literal Id="MessageDisplay" runat="server" />
+        <asp:ContentPlaceHolder ID="Content" runat="server" />
+        
+    </Kay:Form>
+    <!--end-->
+    </body>
+    
+</html>
