@@ -7,6 +7,10 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderID="Content" runat="server">
     <div class="top-bar"> 
+        <div class="global-search">
+            <asp:TextBox runat="server" ID="SearchText" MaxLength="256" CssClass="input" placeholder="Global Search Text" />
+            <asp:LinkButton ID="SearchButton" runat="server" Text="Search" OnClick="SearchCase" CssClass="btn btn-success" />
+        </div>
         <div class="addLink"><asp:HyperLink runat="server" id="AddButton" Text="<i class=icon-plus icon-white></i>Add Case" CssClass="btn btn-success" /></asp:HyperLink></div>        
     </div>
     <div class="row-fluid">		
@@ -25,7 +29,7 @@
     <asp:DataGrid runat="server" ID="List" AutoGenerateColumns="false" GridLines="None"
         CssClass="table table-striped table-bordered bootstrap-datatable datatable" HeaderStyle-CssClass="header" AlternatingItemStyle-CssClass="alt" 
         AllowPaging="true" PagerStyle-Visible="false" AllowSorting="true" OnSortCommand="SortList"
-        OnItemDataBound="BindListItem">
+        OnItemDataBound="BindListItem" >
        
 				
 		<Columns>		
@@ -73,8 +77,9 @@
         
     </asp:DataGrid>
         </div>
-      </div><!--/span-->
-  </div>	
+      </div><!--/span-->    
+  </div>
+  <kay:Pager runat="server" ID="ListPager" /> 	
   <script>
       $('document').ready(function () {
           //datatable

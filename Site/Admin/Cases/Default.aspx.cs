@@ -58,7 +58,7 @@ namespace Kay.Site.Admin.Cases
 
         // Setup list
         private void BindList()
-        {
+        {            
             // List
             ListPager.Visible = true;
             DataView data;
@@ -74,7 +74,8 @@ namespace Kay.Site.Admin.Cases
             data.RowFilter = GetFilter();
             data.Sort = HighlightSort(List, "Cases_Plaintiff Asc");
 
-            List.PageSize = 50;
+            
+            List.PageSize = 20;
             ListPager.Data = data;
             List.DataSource = ListPager.PagedData;
             List.DataBind();
